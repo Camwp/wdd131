@@ -1,0 +1,24 @@
+/* Larger screen styles */
+@media (min-width: 640px) {
+    nav {
+        display: flex !important;
+        justify-content: flex-end;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .header-content {
+        justify-content: space-between;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
