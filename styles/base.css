@@ -37,9 +37,15 @@ header .highlight {
 }
 
 /* Navigation styling */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 nav {
     margin: 0 auto;
-    max-width: 800px;
+
 }
 
 nav ul {
@@ -64,7 +70,12 @@ nav a:hover {
 }
 
 /* Larger Views ******************************/
+/* Larger Views ******************************/
 @media (min-width: 640px) {
+    .hamburger {
+        display: none;
+    }
+
     nav ul {
         display: flex;
     }
@@ -169,7 +180,12 @@ footer p {
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
     nav ul {
+        display: none;
         flex-direction: column;
     }
 
@@ -177,16 +193,19 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    .about-me .content {
+    .about-me .content1,
+    .about-me .content2 {
         flex-direction: column;
         text-align: center;
     }
 
-    .about-me .content p {
+    .about-me .content1 p,
+    .about-me .content2 p {
         margin: 0 0 20px 0;
     }
 
-    .about-me .content img {
+    .about-me .content1 img,
+    .about-me .content2 img {
         max-width: 80%;
         height: auto;
         margin: 0 auto;
