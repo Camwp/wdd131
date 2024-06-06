@@ -1,12 +1,24 @@
-/* Larger screen styles */
 @media (min-width: 640px) {
-    nav {
+    nav.topnav {
         display: flex !important;
         justify-content: flex-end;
+        flex-direction: row;
+        max-width: 400px;
+
+    }
+
+    nav.topnav a {
+        flex: 1 !important;
     }
 
     .icon {
         display: none;
+    }
+
+    .main-header-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .header-content {
@@ -16,9 +28,5 @@
     main {
         max-width: 1200px;
         margin: 20px auto;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
     }
 }

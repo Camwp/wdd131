@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Set the current year in the footer
     document.getElementById('currentyear').textContent = new Date().getFullYear();
-    // Set the last modified date in the footer
     document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
 });
 
 function toggleMenu() {
-    var headerContent = document.querySelector('.header-content');
-    headerContent.classList.toggle('responsive');
+    var nav = document.getElementById("myTopnav");
+    nav.classList.toggle("show");
 }

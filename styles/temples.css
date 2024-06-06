@@ -1,4 +1,3 @@
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +9,11 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    padding: 20px;
     max-width: 100%;
 }
 
-/* Header styling */
 header {
-    background: #4b0082;
+    background: #2a3d55;
     color: #fff;
     padding: 10px;
     position: relative;
@@ -28,21 +25,19 @@ header {
     justify-content: space-between;
 }
 
+
 header h1 {
     font-size: 24px;
 }
 
-/* Navigation styling */
-nav {
+nav.topnav {
     display: none;
-    /* Hidden by default */
     width: 100%;
-    background-color: #4b0082;
+    background-color: #2a3d55;
+    flex-direction: column;
 }
 
-nav a {
-    float: left;
-    display: block;
+nav.topnav a {
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -50,13 +45,13 @@ nav a {
     font-size: 17px;
 }
 
-nav a:hover {
+nav.topnav a:hover {
     background-color: #ddd;
     color: black;
 }
 
-nav a.active {
-    background-color: #4CAF50;
+nav.topnav a.active {
+    background-color: #4caf90;
     color: white;
 }
 
@@ -68,34 +63,27 @@ nav a.active {
 }
 
 @media screen and (max-width: 640px) {
-    nav {
+    .icon {
+        display: block;
+    }
+
+    nav.topnav {
         display: none;
         flex-direction: column;
     }
 
-    .header-content {
-        justify-content: space-between;
-    }
-
-    .icon {
-        display: block;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .header-content.responsive nav {
+    .topnav.show {
         display: flex;
     }
 }
 
-/* Main content styling */
 main {
     text-align: center;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     max-width: 100%;
 }
@@ -116,14 +104,25 @@ figcaption {
     color: #333;
 }
 
-/* Footer styling */
 footer {
     text-align: center;
     padding: 10px;
-    background: #4b0082;
+    background: #2a3d55;
     color: #fff;
 }
 
 footer p {
     margin: 5px 0;
+}
+
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
