@@ -103,7 +103,7 @@ footer {
 }
 
 .weather h2::after {
-    content: '⛅';
+    content: url('../images/weather-icon.svg');
     margin-right: 10px;
     width: 20px;
     height: 20px;
@@ -168,10 +168,5 @@ footer {
         bottom: 10px;
     }
 
-    .weather h2::after {
-        content: url('../images/weather-icon.svg');
-        margin-right: 10px;
-        width: 20px;
-        height: 20px;
-    }
+
 }
