@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    max-width: 100%;
+}
+
+header {
+    background: #2a3d55;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav.topnav {
+    display: none;
+    width: 100%;
+    background-color: #2a3d55;
+    flex-direction: column;
+}
+
+nav.topnav a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+nav.topnav a.active {
+    background-color: #4caf90;
+    color: white;
+}
+
+.icon {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+    .icon {
+        display: block;
+    }
+
+    nav.topnav {
+        display: none;
+        flex-direction: column;
+    }
+
+    .topnav.show {
+        display: flex;
+    }
+}
+
+main {
+    text-align: center;
+}
+
+#temples-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.temple-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background: #fff;
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.temple-card:hover {
+    transform: scale(1.05);
+}
+
+.temple-card h2 {
+    margin: 10px 0;
+}
+
+.temple-card p {
+    margin: 5px 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #2a3d55;
+    color: #fff;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 1024px) {
+    #temples-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    #temples-container {
+        grid-template-columns: 1fr;
+    }
+}
