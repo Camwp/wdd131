@@ -21,7 +21,9 @@
     <main>
         <section class="hero">
             <picture>
-                <img src="images/norcal.webp" alt="Northern California Landscape">
+                <source srcset="images/norcal-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/norcal-medium.webp" media="(min-width: 600px)">
+                <img src="images/norcal-small.webp" alt="Northern California Landscape" width="1500" height="750">
             </picture>
             <section class="sub-hero-image"></section>
             <div class="overlay data">
